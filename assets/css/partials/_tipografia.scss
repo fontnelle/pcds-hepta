@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $blue-dark;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 85px;
+    line-height: 88px;
+    margin-bottom: 32px;
+    span {
+        font-weight: bold;
+    }
+}
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    color: #003241;
+    @include responsive() {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: $blue-dark;
+    @include responsive() {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.depoimento {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: $blue-light;
+}
+
+h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #003241;
+}
+
+h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 48px;
+    color: #003241;
+}

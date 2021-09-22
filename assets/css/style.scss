@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    // border: 1px dashed hotpink;
+}
+
+a {
+    text-decoration: none;
+}
+
+@mixin responsive() {
+    @media screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@import 'partials/colors';
+@import 'partials/tipografia';
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #fafafa;
+    background-repeat: no-repeat
+}
+
+@import 'partials/layout';
+@import 'partials/spacing';
+@import 'partials/buttons';
+@import 'partials/menu';
+@import 'partials/animations';

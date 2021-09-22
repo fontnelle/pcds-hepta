@@ -1,0 +1,6 @@
+<svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="mouse">
+<rect id="mouselinha" x="0.5" y="0.5" width="23" height="35" rx="11.5" stroke="#007985"/>
+<rect id="mouseroll" width="4" height="8" rx="2" transform="matrix(-1 0 0 1 14 23)" fill="#007985"/>
+</g>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="478" height="566" viewBox="0 0 478 566" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="elementos">
+<rect id="Rectangle 75" x="418.536" y="360.113" width="39" height="39" transform="rotate(-45 418.536 360.113)" stroke="#FFC400" stroke-width="5"/>
+<rect id="Rectangle 80" x="140.5" y="463.5" width="30" height="30" stroke="#FFC400" stroke-width="5"/>
+<rect id="Rectangle 76" x="357.536" y="95.1127" width="39" height="39" transform="rotate(-45 357.536 95.1127)" stroke="#FFC400" stroke-width="5"/>
+<g id="Rectangle 79" opacity="0.3" filter="url(#filter0_f)">
+<rect x="15" y="46.1127" width="44" height="44" transform="rotate(-45 15 46.1127)" fill="#008693"/>
+</g>
+<rect id="Rectangle 77" opacity="0.3" x="198.536" y="97.5564" width="24.0711" height="24.0711" transform="rotate(-45 198.536 97.5564)" stroke="#DB1826" stroke-width="5"/>
+<rect id="vermelho-diagonal" opacity="0.3" x="22.5355" y="508.556" width="24.0711" height="24.0711" transform="rotate(-45 22.5355 508.556)" stroke="#DB1826" stroke-width="5"/>
+<rect id="vermelho-vazado" opacity="0.2" x="239.536" y="544.556" width="24.0711" height="24.0711" transform="rotate(-45 239.536 544.556)" stroke="#DB1826" stroke-width="5"/>
+<rect id="vermelho" opacity="0.8" x="430" y="208" width="29.0711" height="29.0711" fill="#DC1D27"/>
+<rect id="azul" opacity="0.8" x="385" y="432" width="29.0711" height="29.0711" fill="#008693"/>
+<rect id="amarelo" opacity="0.8" x="45.5356" y="216.979" width="29.0711" height="29.0711" transform="rotate(45 45.5356 216.979)" fill="#FFC400"/>
+</g>
+<defs>
+<filter id="filter0_f" x="0" y="0" width="92.2254" height="92.2254" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="7.5" result="effect1_foregroundBlur"/>
+</filter>
+</defs>
+</svg>

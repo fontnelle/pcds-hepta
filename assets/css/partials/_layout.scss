@@ -1,0 +1,1180 @@
+// layout of project
+// container devices
+$container-xl: 1440px;
+$container-l: 1140px;
+$container-m: 960px;
+$container-s: 540px;
+// Mixins of media query
+@mixin responsive($device) {
+    @if $device==xl {
+        // for resolutions upper than 1440px
+        @media screen and (min-width: $container-xl) {
+            @content;
+        }
+    }
+    @if $device==l {
+        // for resolutions between 1140px and 1440px
+        @media screen and (max-width: $container-xl) and (min-width: $container-l) {
+            @content;
+        }
+    }
+    @if $device==m {
+        // for resolutions between 960px and 1140px
+        @media screen and (max-width: $container-l) and (min-width: $container-m) {
+            @content;
+        }
+    }
+    @if $device==s {
+        // for resolutions less than 960px
+        @media screen and (max-width: $container-m) {
+            @content;
+        }
+    }
+}
+
+.bg-loader {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(225deg, $blue 0%, $blue-dark 100%);
+}
+
+.container {
+    max-width: $container-xl;
+    margin: 0 auto;
+    padding: 96px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    overflow: hidden;
+    @include responsive(s) {
+        flex-direction: column;
+        padding: 32px 18px;
+    }
+}
+
+.full-container {
+    background: linear-gradient(319.63deg, #008693 -37.09%, rgba(223, 238, 239, 0.29) 66.45%);
+    @include responsive(s) {
+        height: auto;
+        .flex-item-3,
+        .flex-item-1 {
+            flex: 1 1 200px;
+        }
+    }
+}
+
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-item-1 {
+    flex: 1 1 360px;
+}
+
+.flex-item-2 {
+    flex: 2 1 360px;
+}
+
+.flex-item-3 {
+    flex: 3 1 360px;
+}
+
+.flex-item-4 {
+    flex: 4 1 360px;
+}
+
+.flex-item-5 {
+    flex: 5 1 360px;
+}
+
+.flex-item-auto {
+    flex: 2 1 auto;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.hero {
+    height: 100vh;
+    button {
+        margin: 0;
+        border-radius: 5px;
+        padding: 16px 24px;
+        border: none;
+        cursor: pointer;
+        background: $red;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        color: #fafafa;
+        transition: .6s ease;
+        &:hover {
+            transform: translate3d(0, -10px, 0);
+            box-shadow: 0px 17px 29px rgba(219, 24, 38, 0.47), 0px 2.12866px 3.63125px rgba(219, 24, 38, 0.235);
+        }
+    }
+    @include responsive(m) {
+        height: auto;
+    }
+    @include responsive(s) {
+        padding-bottom: 0;
+        height: 0vh;
+        height: auto;
+        h1 {
+            font-size: 36px;
+            line-height: 30px;
+            margin-bottom: 0;
+            text-align: left;
+        }
+        img {
+            width: 90%;
+        }
+        p {
+            width: 320px;
+            margin: 0 auto;
+        }
+        .flex-item-1 {
+            height: 320px;
+        }
+    }
+    @include responsive(m) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            padding-left: 10px;
+        }
+        p {
+            width: 100%;
+            padding-left: 10px;
+        }
+    }
+}
+
+.contenedor {
+    margin-bottom: 32px;
+    display: flex;
+    width: 800px;
+    height: 90px;
+    color: #003241;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 85px;
+    overflow: hidden;
+    // border: 1px solid hotpink;
+    ul {
+        list-style: none;
+        animation: cambiar 7s infinite;
+    }
+    ul,
+    p {
+        margin: 0;
+    }
+    @include responsive(s) {
+        font-size: 32px;
+        font-size: 40px;
+        height: 70px;
+        padding: 3;
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    @include responsive(l) {
+        width: 100%;
+        font-size: 78px;
+        line-height: 85px;
+    }
+    @include responsive(m) {
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+
+.depoimentos {
+    padding: 40px 40px;
+    background: linear-gradient(108.62deg, #DFEEF0 3.54%, #E7F0F1 91.92%);
+    margin-bottom: -160px;
+    @include responsive(s) {
+        margin-bottom: 0;
+    }
+}
+
+.depoimentos-container {
+    max-width: $container-xl;
+    margin: 0 auto;
+    display: flex;
+    @include responsive(s) {
+        padding: 12px 2px;
+        flex-direction: column;
+        background: none;
+        p {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px 24px;
+    margin: 32px 0;
+    width: 95%;
+    background: #FAFAFA;
+    box-shadow: 0px 12px 148px rgba(0, 121, 133, 0.07), 0px 4.3802px 54.0224px rgba(0, 121, 133, 0.0482987), 0px 2.1265px 26.2269px rgba(0, 121, 133, 0.0389404), 0px 1.04245px 12.8569px rgba(0, 121, 133, 0.0310596), 0px 0.412187px 5.08364px rgba(0, 121, 133, 0.0217013);
+    border-radius: 10px;
+    @include responsive(s) {
+        width: auto;
+    }
+}
+
+.card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    svg {
+        width: 40%;
+        padding: 0 8px;
+        path {
+            fill: $yellow;
+        }
+    }
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 6px;
+    img {
+        padding-right: 16px;
+    }
+    .nome {
+        span {
+            color: $yellow;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+        }
+    }
+    @include responsive(s) {
+        flex-direction: column;
+        width: 100%;
+        .nome {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            span {
+                font-size: 14px;
+            }
+        }
+        .foto {
+            img {
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+.card-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background: rgba(0, 134, 147, 0.1);
+    border-radius: 6px;
+    color: $blue;
+    cursor: pointer;
+    transition: .6s ease;
+    @include responsive(s) {
+        p {
+            a {
+                font-size: 14px;
+                margin: 0px;
+            }
+        }
+    }
+    svg {
+        path {
+            fill: $blue;
+        }
+        margin-top: 1px;
+        margin-right: 8px;
+    }
+    a {
+        font-family: 'Source Sans Pro', sans-serif;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        color: #008693;
+        text-transform: uppercase;
+    }
+    &:hover {
+        background: $blue;
+        svg {
+            path {
+                fill: #fafafa;
+            }
+        }
+        a {
+            color: #fafafa;
+        }
+    }
+}
+
+.video-item-1 {
+    h2 {
+        margin-bottom: 64px;
+    }
+}
+
+.orbita-nova {
+    width: 500px;
+    transform: translate3d(-10px, -60px, 0);
+    .usuarios {
+        position: absolute;
+        z-index: 999;
+        @include responsive(s) {
+            svg {
+                width: 40px;
+                height: 40px;
+                border-radius: 100px;
+                border: 1px solid hotpink;
+            }
+        }
+        .user0 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 470px;
+            left: 275px;
+            transition: .6s ease;
+            &::after {
+                content: 'Vandy Rodrigues';
+                text-align: center;
+                display: block;
+                width: 140px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $yellow;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after {
+                    content: 'Vandy';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $yellow;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user1 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 355px;
+            left: 105px;
+            transition: .6s ease;
+            &::after {
+                content: 'Bruno Silveira';
+                text-align: center;
+                display: block;
+                width: 140px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $blue;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid $blue-dark;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after {
+                    content: 'Bruno';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $blue;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user2 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 280px;
+            left: 260px;
+            transition: .6s ease;
+            &::after {
+                content: 'Emanuel Di Matteo';
+                text-align: center;
+                display: block;
+                width: 140px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $yellow;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after {
+                    content: 'Emanuel';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $yellow;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user3 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 120px;
+            left: 260px;
+            transition: .6s ease;
+            &::after {
+                content: 'Eustáquio Guimarães';
+                text-align: center;
+                display: block;
+                width: 160px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $blue;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after {
+                    content: 'Eustáquio';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $blue;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user4 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 150px;
+            left: 110px;
+            transition: .6s ease;
+            &::after {
+                content: 'Francisco Junior';
+                text-align: center;
+                display: block;
+                width: 130px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $yellow;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after {
+                    content: 'Francisco';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $yellow;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user5 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 10px;
+            left: 320px;
+            transition: .6s ease;
+            &::after {
+                content: 'Gilberto Uchoa';
+                text-align: center;
+                display: block;
+                width: 120px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $yellow;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 70px;
+                left: 320px;
+                &::after {
+                    content: 'Gilberto ';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $yellow;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user6 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 510px;
+            left: 140px;
+            transition: .6s ease;
+            &::after {
+                content: 'Jerônimo F. da Silva';
+                text-align: center;
+                display: block;
+                width: 160px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $blue;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &::after {
+                    content: 'Jerônimo ';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $blue;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user7 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 550px;
+            left: 480px;
+            transition: .6s ease;
+            &::after {
+                content: 'Victor Santana';
+                text-align: center;
+                display: block;
+                width: 120px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $blue;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                left: 300px;
+                &::after {
+                    content: 'Victor';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $blue;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user8 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 320px;
+            left: 550px;
+            transition: .6s ease;
+            &::after {
+                content: 'Rodrigo L. Costa';
+                text-align: center;
+                display: block;
+                width: 120px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $yellow;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                left: 300px;
+                top: 390px;
+                &::after {
+                    content: 'Rodrigo';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $yellow;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user9 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 130px;
+            left: 550px;
+            transition: .6s ease;
+            &::after {
+                content: 'Leandro Moreno';
+                text-align: center;
+                display: block;
+                width: 130px;
+                height: 30px;
+                padding: 4px 0;
+                left: -50px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $blue;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 190px;
+                left: 350px;
+                &::after {
+                    content: 'Leandro ';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $blue;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+        .user10 {
+            max-width: 64px;
+            max-height: 64px;
+            position: absolute;
+            top: 475px;
+            left: 600px;
+            transition: .6s ease;
+            &::after {
+                content: 'Fábio Borges';
+                text-align: center;
+                display: block;
+                width: 120px;
+                height: 30px;
+                padding: 4px 0;
+                left: -10px;
+                margin: -40px;
+                margin-top: 5px;
+                border-radius: 100px;
+                background: $blue;
+                color: $blue-dark;
+                transition: .6s ease;
+                opacity: 1;
+                border: 1px solid hotpink;
+            }
+            &:hover {
+                transition: .6s ease;
+                &::after {
+                    background-color: $red;
+                    box-shadow: 0px 4px 55px rgba(219, 24, 38, 0.35), 0px 1.20588px 16.5809px rgba(219, 24, 38, 0.228056), 0px 0.500862px 6.88685px rgba(219, 24, 38, 0.175), 0px 0.181152px 2.49084px rgba(219, 24, 38, 0.121944);
+                }
+            }
+            @include responsive(s) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 210px;
+                left: 180px;
+                &::after {
+                    content: 'Fábio  ';
+                    text-align: center;
+                    display: block;
+                    align-items: center;
+                    height: 26px;
+                    font-size: 12px;
+                    padding: 4px 8px;
+                    margin: 0 auto;
+                    margin-top: 2px;
+                    border-radius: 100px;
+                    background: $blue;
+                    color: $blue-dark;
+                    transition: .6s ease;
+                    opacity: 1;
+                    border: 1px solid hotpink;
+                }
+            }
+        }
+    }
+}
+
+#dados-hepta {
+    max-width: $container-xl;
+    background-color: #EDF6F7;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    img {
+        background-color: #DCEDEF;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    margin-bottom: 80px;
+}
+
+#dados-hepta-2 {
+    max-width: $container-xl;
+    background-color: #FBF7E9;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    img {
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        border-radius: 4px;
+    }
+    button {
+        margin: 0;
+        border-radius: 5px;
+        padding: 16px 24px;
+        border: none;
+        cursor: pointer;
+        border: 2px solid #0A3241;
+        background: none;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        color: #0A3241;
+        transition: .6s ease;
+        &:hover {
+            background-color: $yellow;
+            color: #fafafa;
+            border: 2px solid $yellow-dark;
+            transform: translate3d(0, -10px, 0);
+            box-shadow: 0px 17px 29px rgba(228, 178, 15, 0.47), 0px 2.12866px 3.63125px rgba(219, 24, 38, 0.235);
+        }
+    }
+    @include responsive(s) {
+        button {
+            margin-bottom: 40px;
+            background-color: $yellow;
+            font-size: 18px;
+            padding: 8px 16px;
+        }
+    }
+}
+
+#jeitohepta {
+    span {
+        background: rgba($blue, 0.1);
+        padding: 8px 24px;
+        border-radius: 100px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 32px;
+        color: $blue;
+    }
+    h2 {
+        margin: 32px 0;
+    }
+    p {
+        margin-bottom: 64px;
+    }
+    button {
+        margin: 0;
+        border-radius: 5px;
+        padding: 16px 24px;
+        border: none;
+        cursor: pointer;
+        background: $red;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 32px;
+        color: #fafafa;
+        transition: .6s ease;
+        &:hover {
+            transform: translate3d(0, -10px, 0);
+            box-shadow: 0px 17px 29px rgba(219, 24, 38, 0.47), 0px 2.12866px 3.63125px rgba(219, 24, 38, 0.235);
+        }
+    }
+    @include responsive(s) {
+        p {
+            margin-bottom: 16px;
+            width: 100%;
+        }
+        button {
+            width: 100%;
+        }
+    }
+}
+
+#footer {
+    .flex-item-1 {
+        background: $blue;
+        padding: 8px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 30px;
+        @include responsive(s) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1 1 120px;
+            border-radius: 5px;
+            padding: 8px;
+            p {
+                text-align: center;
+                font-size: 12px;
+            }
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+    p {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 32px;
+        color: #FAFAFA;
+        // @include responsive() {
+        //     text-align: center;
+        //     margin-top: 16px;
+        // }
+        a {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 32px;
+            text-decoration-line: underline;
+            color: #FAFAFA;
+            text-decoration: none;
+            transition: .6s ease;
+            &::after {
+                content: '';
+                display: block;
+                width: 50px;
+                height: 4px;
+                background: linear-gradient(269deg, #FFC400 0.77%, rgba(255, 196, 0, 0) 50.71%);
+                transition: .6s ease;
+                border-radius: 100px;
+                opacity: 0;
+            }
+            &:hover {
+                transition: .6s ease;
+                transform: translate3d(0, -3px, 0);
+                &::after {
+                    opacity: 1;
+                    width: 212px;
+                }
+            }
+        }
+    }
+}

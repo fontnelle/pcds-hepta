@@ -1,0 +1,161 @@
+.logo-animada {
+    opacity: 0;
+    animation: numero-animado 8s ease alternate;
+}
+
+@keyframes numero-animado {
+    0% {
+        opacity: 0;
+        stroke-width: .3;
+        fill: transparent;
+        transform: translate3d(0, 10px, 0);
+    }
+    25% {
+        opacity: 1;
+        stroke-width: 1;
+        stroke-dasharray: 100 0;
+        fill: transparent;
+        transform: translate3d(0, 20px, 0);
+    }
+    60%,
+    100% {
+        stroke-width: 0.3;
+        fill: #fafafa;
+        opacity: 0;
+        transform: translate3d(0, 0px, 0);
+    }
+}
+
+.anos-animado {
+    opacity: 0;
+    animation: anos-animado 10s ease alternate;
+    @include responsive(s) {
+        svg {
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@keyframes anos-animado {
+    0% {
+        opacity: 0;
+        stroke-width: .3;
+        fill: transparent;
+        transform: translate3d(0, 10px, 0);
+    }
+    25% {
+        opacity: 1;
+        stroke-width: 1;
+        stroke-dasharray: 100 0;
+        fill: transparent;
+        transform: translate3d(0, 20px, 0);
+    }
+    60%,
+    100% {
+        stroke-width: 0.3;
+        fill: #fafafa;
+        opacity: 0;
+        transform: translate3d(0, 0px, 0);
+    }
+}
+
+.elementos {
+    animation: flutuar 12s ease-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translate3d(0, 0, 0);
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: translate3d(-10px, 0px, 0);
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        transform: rotate(0deg);
+    }
+}
+
+.orbita-elemento {
+    animation: flutuar 12s ease-out infinite alternate;
+}
+
+.orbita {
+    animation: rodar 12s ease-out infinite alternate;
+}
+
+@keyframes rodar {
+    0% {
+        transform: translate3d(-100px, -100px, 0);
+    }
+    50% {
+        transform: translate3d(-100px, -90px, 0);
+    }
+    100% {
+        transform: translate3d(-100px, -100px, 0);
+    }
+}
+
+.user0,
+.user1,
+.user2,
+.user3,
+.user4,
+.user5,
+.user6,
+.user7,
+.user8,
+.user9,
+.user10,
+.user11,
+{
+    animation: efeito-orbitar 6s ease-out infinite alternate;
+}
+
+@keyframes efeito-orbitar {
+    0% {
+        transform: translate3d(0, 0, 0);
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: translate3d(0, -10px, 0);
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes cambiar {
+    0% {
+        margin-top: 0;
+    }
+    20% {
+        margin-top: 0;
+    }
+    25% {
+        margin-top: -90PX;
+    }
+    50% {
+        margin-top: -90PX;
+    }
+    55% {
+        margin-top: -180PX;
+    }
+    80% {
+        margin-top: -180PX;
+    }
+    85% {
+        margin-top: -90PX;
+    }
+    95% {
+        margin-top: -90PX;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
