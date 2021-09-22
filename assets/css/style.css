@@ -119,7 +119,7 @@ body {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 96px 24px;
+  padding: 70px 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -401,6 +401,72 @@ body {
   .depoimentos {
     margin-bottom: 0;
   }
+}
+
+#sobre-programa h6, #sobre-programa h2 {
+  text-align: center;
+}
+
+#sobre-programa h6::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 60px;
+  border-radius: 100px;
+  background: orange;
+  margin: 0 auto;
+}
+
+#programa-texto .video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#programa-complemento {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#programa-complemento .o-que {
+  padding: 0 40px;
+}
+
+#programa-complemento .o-que h2 {
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  #programa-complemento .o-que {
+    padding: 0;
+  }
+}
+
+#programa-complemento .programatico h2 {
+  padding-bottom: 20px;
+}
+
+#programa-complemento .programatico p {
+  font-size: 23px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #eeeded;
+}
+
+#programa-complemento .programatico p::before {
+  content: "";
+  display: inline-block;
+  height: 6px;
+  width: 10px;
+  background: #FFC400;
+  border-radius: 100px;
+  margin: 5px 10px;
 }
 
 .depoimentos-container {
