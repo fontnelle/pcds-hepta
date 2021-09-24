@@ -259,8 +259,53 @@ body {
   overflow: hidden;
 }
 
+@-webkit-keyframes go-back {
+  from {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes go-back {
+  from {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes go-left {
+  from {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes go-left {
+  from {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .hero {
   height: 100vh;
+  position: relative;
 }
 
 .hero button {
@@ -294,6 +339,92 @@ body {
   line-height: 72px !important;
   font-weight: bold;
   margin-bottom: 32px;
+}
+
+.hero .item-1 {
+  position: absolute;
+  left: 790px;
+  top: 280px;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: go-back 2s infinite alternate;
+          animation: go-back 2s infinite alternate;
+}
+
+.hero .item-2 {
+  position: absolute;
+  left: 805px;
+  top: 140px;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: go-left 2s infinite alternate;
+          animation: go-left 2s infinite alternate;
+}
+
+.hero .item-3 {
+  position: absolute;
+  left: 1000px;
+  top: 60px;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: go-back 2s infinite alternate;
+          animation: go-back 2s infinite alternate;
+}
+
+.hero .item-4 {
+  position: absolute;
+  left: 1150px;
+  top: 150px;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: go-left 2s infinite alternate;
+          animation: go-left 2s infinite alternate;
+}
+
+.hero .item-5 {
+  position: absolute;
+  left: 1150px;
+  top: 320px;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: go-back 2s infinite alternate;
+          animation: go-back 2s infinite alternate;
+}
+
+.hero .item-6 {
+  position: absolute;
+  left: 1120px;
+  top: 500px;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: go-left 2s infinite alternate;
+          animation: go-left 2s infinite alternate;
+}
+
+.hero .item-7 {
+  position: absolute;
+  left: 790px;
+  top: 440px;
+  margin: 0;
+  padding: 0;
+  -webkit-animation: go-back 2s infinite alternate;
+          animation: go-back 2s infinite alternate;
+}
+
+.hero .item-selos {
+  position: absolute;
+  left: 20px;
+  top: 690px;
+  margin: 0;
+  padding: 0;
+}
+
+.hero .item-carinha {
+  position: absolute;
+  left: 990px;
+  top: 872px;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 1140px) and (min-width: 960px) {
