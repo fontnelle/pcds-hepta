@@ -146,9 +146,9 @@ body {
 }
 
 .full-container {
-  background-image: url(../img/bg-fundo-v7.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background: linear-gradient(319.63deg, #008693 -37.09%, rgba(223, 238, 239, 0.29) 66.45%);
 }
 
 @media screen and (max-width: 960px) {
@@ -757,6 +757,37 @@ body {
   }
 }
 
+#jeitohepta ul {
+  margin-bottom: 40px;
+}
+
+#jeitohepta ul li {
+  font-size: 18px;
+  line-height: 60px;
+  color: #008693;
+  list-style: none;
+}
+
+#jeitohepta ul li::before {
+  content: '';
+  display: inline-block;
+  background: #FFC400;
+  width: 10px;
+  height: 6px;
+  padding: 4px 8px;
+  margin: 2px 8px;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 960px) {
+  #jeitohepta ul li {
+    padding: 16px 0;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+}
+
 #jeitohepta span {
   background: rgba(0, 134, 147, 0.1);
   padding: 8px 24px;
@@ -774,7 +805,7 @@ body {
 }
 
 #jeitohepta p {
-  margin-bottom: 64px;
+  margin-bottom: 20px;
 }
 
 #jeitohepta button {
@@ -809,6 +840,37 @@ body {
   #jeitohepta button {
     width: 100%;
   }
+}
+
+#cronograma h3 {
+  color: #008693;
+}
+
+#cronograma h3::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #FFC400;
+  border-radius: 100px;
+  margin: 20px auto;
+}
+
+#cronograma .flex-item-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
 }
 
 #footer .flex-item-1 {

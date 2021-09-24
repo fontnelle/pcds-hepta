@@ -65,10 +65,10 @@ $container-s: 540px;
 }
 
 .full-container {
-    background-image: url(../img/bg-fundo-v7.png);
+    // background-image: url(../img/bg-fundo-v7.png);
     background-size: cover;
     background-repeat: no-repeat;
-    // background: linear-gradient(319.63deg, #008693 -37.09%, rgba(223, 238, 239, 0.29) 66.45%);
+    background: linear-gradient(319.63deg, #008693 -37.09%, rgba(223, 238, 239, 0.29) 66.45%);
     @include responsive(s) {
         height: auto;
         .flex-item-3,
@@ -529,6 +529,32 @@ $container-s: 540px;
 }
 
 #jeitohepta {
+    ul{
+        margin-bottom: 40px;
+        li{
+            font-size: 18px;
+            line-height: 60px;   
+            color: $blue;                                ;
+            list-style: none;
+            &::before{
+                content: '';
+                display: inline-block;
+                background: $yellow;
+                width: 10px;
+                height: 6px;
+                padding: 4px 8px;
+                margin: 2px 8px;
+                border-radius: 100px;
+            }
+            @include responsive(s){
+                padding: 16px 0 ;
+                font-size: 16px;
+                line-height: 24px;  
+                border-bottom: 1px solid #e4e4e4; 
+            }
+        }
+
+    }
     span {
         background: rgba($blue, 0.1);
         padding: 8px 24px;
@@ -544,7 +570,7 @@ $container-s: 540px;
         margin: 32px 0;
     }
     p {
-        margin-bottom: 64px;
+        margin-bottom: 20px;
     }
     button {
         margin: 0;
@@ -573,6 +599,31 @@ $container-s: 540px;
         button {
             width: 100%;
         }
+    }
+}
+
+#cronograma{
+    
+    h3{
+        color: $blue;
+        &::before{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: $yellow;
+            border-radius: 100px;
+            margin: 20px auto;
+        }
+
+    }
+    .flex-item-1{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 }
 
