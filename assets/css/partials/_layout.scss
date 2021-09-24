@@ -200,6 +200,7 @@ $container-s: 540px;
            text-align: center !important;
             
         }
+    
     }
 
     .mulher-cadeira{
@@ -221,6 +222,10 @@ $container-s: 540px;
         @include responsive(s){
             display: none;
         }
+        @include responsive(l){
+            left: 480px;
+            top:466px;
+        }
     }
     .item-2{
         position: absolute;
@@ -231,6 +236,10 @@ $container-s: 540px;
         animation: go-left 2s infinite alternate;
         @include responsive(s){
             display: none;
+        }
+        @include responsive(l){
+            left: 480px;
+            top: 293px;
         }
     }
     .item-3{
@@ -243,6 +252,10 @@ $container-s: 540px;
         @include responsive(s){
             display: none;
         }
+        @include responsive(l){
+            left: 578px;
+            top: -5px;
+        }
     }
     .item-4{
         position: absolute;
@@ -253,6 +266,10 @@ $container-s: 540px;
         animation: go-left 2s infinite alternate;
         @include responsive(s){
             display: none;
+        }
+        @include responsive(l){
+            left: 976px;
+            top: 190px;
         }
     }
     .item-5{
@@ -265,6 +282,11 @@ $container-s: 540px;
         @include responsive(s){
             display: none;
         }
+        @include responsive(l){
+            left: 494px;
+            top: 154px;
+           
+        }
     }
     .item-6{
         
@@ -276,6 +298,11 @@ $container-s: 540px;
         animation: go-left 2s infinite alternate;
         @include responsive(s){
             display: none;
+        }
+        @include responsive(l){
+            left: 925px;
+            top: 5px;
+           
         }
         
     }
@@ -290,6 +317,11 @@ $container-s: 540px;
         @include responsive(s){
             display: none;
         }
+        @include responsive(l){
+            left: 954px;
+            top: 440px;
+           
+        }
     }
     .item-selos{
         position: absolute;
@@ -299,6 +331,9 @@ $container-s: 540px;
         padding: 0;
         @include responsive(s){
             display: none;
+        }
+        @include responsive(l){
+            top: 710px;
         }
         
     }
@@ -311,9 +346,14 @@ $container-s: 540px;
         @include responsive(s){
             display: none;
         }
+        @include responsive(l){
+            left: 790px;
+            top: 786px;
+        }
     }
     @include responsive(m) {
         height: auto;
+       
     }
     @include responsive(s) {
         padding-bottom: 0;
@@ -355,6 +395,21 @@ $container-s: 540px;
             width: 100%;
             padding-left: 10px;
         }
+    }
+    @include responsive(l){
+        h1{
+            font-size: 36px !important;
+            line-height: 42px;
+            margin:  0;
+        }
+        p{
+            font-size: 18px;
+        }
+        .contenedor{
+            font-size: 28px;
+        }
+
+  
     }
 }
 

@@ -371,6 +371,13 @@ body {
   }
 }
 
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-1 {
+    left: 480px;
+    top: 466px;
+  }
+}
+
 .hero .item-2 {
   position: absolute;
   left: 805px;
@@ -384,6 +391,13 @@ body {
 @media screen and (max-width: 960px) {
   .hero .item-2 {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-2 {
+    left: 480px;
+    top: 293px;
   }
 }
 
@@ -403,6 +417,13 @@ body {
   }
 }
 
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-3 {
+    left: 578px;
+    top: -5px;
+  }
+}
+
 .hero .item-4 {
   position: absolute;
   left: 1150px;
@@ -416,6 +437,13 @@ body {
 @media screen and (max-width: 960px) {
   .hero .item-4 {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-4 {
+    left: 976px;
+    top: 190px;
   }
 }
 
@@ -435,6 +463,13 @@ body {
   }
 }
 
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-5 {
+    left: 494px;
+    top: 154px;
+  }
+}
+
 .hero .item-6 {
   position: absolute;
   left: 1120px;
@@ -448,6 +483,13 @@ body {
 @media screen and (max-width: 960px) {
   .hero .item-6 {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-6 {
+    left: 925px;
+    top: 5px;
   }
 }
 
@@ -467,6 +509,13 @@ body {
   }
 }
 
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-7 {
+    left: 954px;
+    top: 440px;
+  }
+}
+
 .hero .item-selos {
   position: absolute;
   left: 20px;
@@ -481,6 +530,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-selos {
+    top: 710px;
+  }
+}
+
 .hero .item-carinha {
   position: absolute;
   left: 990px;
@@ -492,6 +547,13 @@ body {
 @media screen and (max-width: 960px) {
   .hero .item-carinha {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero .item-carinha {
+    left: 790px;
+    top: 786px;
   }
 }
 
@@ -551,6 +613,20 @@ body {
   .hero p {
     width: 100%;
     padding-left: 10px;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1140px) {
+  .hero h1 {
+    font-size: 36px !important;
+    line-height: 42px;
+    margin: 0;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .hero .contenedor {
+    font-size: 28px;
   }
 }
 
