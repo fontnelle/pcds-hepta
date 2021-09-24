@@ -596,10 +596,10 @@ body {
 
 @media screen and (max-width: 1140px) and (min-width: 960px) {
   .hero {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -613,6 +613,11 @@ body {
   .hero p {
     width: 100%;
     padding-left: 10px;
+  }
+  .hero .logo-programa {
+    width: 60%;
+    margin-bottom: 20px;
+    padding: 0;
   }
 }
 
@@ -1172,6 +1177,12 @@ body {
           flex-direction: row;
 }
 
+#cronograma span {
+  background: #FFC400;
+  padding: 8px 16px;
+  border-radius: 100px;
+}
+
 #cronograma h3 {
   color: #008693;
 }
@@ -1181,7 +1192,7 @@ body {
   display: block;
   width: 10px;
   height: 10px;
-  background: #FFC400;
+  background: #e4e4e4;
   border-radius: 100px;
   margin: 20px auto;
 }
@@ -1196,6 +1207,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1140px) and (min-width: 960px) {
+  #cronograma h3 {
+    font-size: 18px;
   }
 }
 

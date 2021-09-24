@@ -385,7 +385,7 @@ $container-s: 540px;
         }
     }
     @include responsive(m) {
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         h1 {
@@ -394,6 +394,11 @@ $container-s: 540px;
         p {
             width: 100%;
             padding-left: 10px;
+        }
+        .logo-programa{
+            width: 60%;
+           margin-bottom: 20px;
+            padding: 0;
         }
     }
     @include responsive(l){
@@ -408,7 +413,6 @@ $container-s: 540px;
         .contenedor{
             font-size: 28px;
         }
-
   
     }
 }
@@ -836,6 +840,11 @@ $container-s: 540px;
 #cronograma{
     display: flex;
     flex-direction: row;
+    span{
+        background: $yellow;
+        padding:8px 16px;
+        border-radius: 100px;
+    }
     h3{
         color: $blue;
         &::before{
@@ -843,7 +852,7 @@ $container-s: 540px;
             display: block;
             width: 10px;
             height: 10px;
-            background: $yellow;
+            background: #e4e4e4;
             border-radius: 100px;
             margin: 20px auto;
         }
@@ -857,6 +866,13 @@ $container-s: 540px;
     }
     @include responsive(s){
         flex-direction: column;
+       
+        
+    }
+    @include responsive(m){
+        h3{
+            font-size: 18px;
+        }
        
         
     }
