@@ -346,6 +346,7 @@ body {
     font-size: 26px !important;
     line-height: 30px !important;
     padding-bottom: 20px !important;
+    text-align: center !important;
   }
 }
 
@@ -490,9 +491,7 @@ body {
 
 @media screen and (max-width: 960px) {
   .hero .item-carinha {
-    left: 35%;
-    top: 772px;
-    width: 25%;
+    display: none;
   }
 }
 
@@ -526,6 +525,7 @@ body {
   .hero p {
     width: 320px;
     margin: 0 auto;
+    text-align: center;
   }
   .hero .flex-item-1 {
     height: 320px;
@@ -588,6 +588,12 @@ body {
     padding: 3;
     margin-bottom: 16px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
