@@ -757,6 +757,7 @@ $container-s: 540px;
 }
 
 #jeitohepta {
+
     ul{
         margin-bottom: 40px;
         li{
@@ -834,6 +835,10 @@ $container-s: 540px;
             width: 90vw;
            
         }
+    }
+    @include responsive(m){
+        padding-top: 10px;
+        padding-bottom: 60px;
     }
 }
 

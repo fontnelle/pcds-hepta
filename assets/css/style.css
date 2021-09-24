@@ -1167,6 +1167,13 @@ body {
   }
 }
 
+@media screen and (max-width: 1140px) and (min-width: 960px) {
+  #jeitohepta {
+    padding-top: 10px;
+    padding-bottom: 60px;
+  }
+}
+
 #cronograma {
   display: -webkit-box;
   display: -ms-flexbox;
