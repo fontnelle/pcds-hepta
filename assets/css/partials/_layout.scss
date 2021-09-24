@@ -193,7 +193,23 @@ $container-s: 540px;
         line-height: 72px!important;
         font-weight: bold;
         margin-bottom: 32px;
+        @include responsive(s){
+            font-size: 26px !important;
+            line-height: 30px !important;
+            padding-bottom: 20px !important;
+           
+            
+        }
     }
+
+    .mulher-cadeira{
+       
+        width: 83%;
+        padding-bottom: 20px;
+
+     
+    }
+
     //item animados
     .item-1{
         position: absolute;
@@ -202,6 +218,9 @@ $container-s: 540px;
         margin: 0;
         padding: 0;
         animation: go-back 2s infinite alternate;
+        @include responsive(s){
+            display: none;
+        }
     }
     .item-2{
         position: absolute;
@@ -210,6 +229,9 @@ $container-s: 540px;
         margin: 0;
         padding: 0;
         animation: go-left 2s infinite alternate;
+        @include responsive(s){
+            display: none;
+        }
     }
     .item-3{
         position: absolute;
@@ -218,6 +240,9 @@ $container-s: 540px;
         margin: 0;
         padding: 0;
         animation: go-back 2s infinite alternate;
+        @include responsive(s){
+            display: none;
+        }
     }
     .item-4{
         position: absolute;
@@ -226,6 +251,9 @@ $container-s: 540px;
         margin: 0;
         padding: 0;
         animation: go-left 2s infinite alternate;
+        @include responsive(s){
+            display: none;
+        }
     }
     .item-5{
         position: absolute;
@@ -234,6 +262,9 @@ $container-s: 540px;
         margin: 0;
         padding: 0;
         animation: go-back 2s infinite alternate;
+        @include responsive(s){
+            display: none;
+        }
     }
     .item-6{
         
@@ -243,6 +274,9 @@ $container-s: 540px;
         margin: 0;
         padding: 0;
         animation: go-left 2s infinite alternate;
+        @include responsive(s){
+            display: none;
+        }
         
     }
     .item-7{
@@ -253,6 +287,9 @@ $container-s: 540px;
         margin: 0;
         padding: 0;
         animation: go-back 2s infinite alternate;
+        @include responsive(s){
+            display: none;
+        }
     }
     .item-selos{
         position: absolute;
@@ -260,6 +297,9 @@ $container-s: 540px;
         top: 690px;
         margin: 0;
         padding: 0;
+        @include responsive(s){
+            display: none;
+        }
         
     }
     .item-carinha{
@@ -268,7 +308,11 @@ $container-s: 540px;
         top: 872px;
         margin: 0;
         padding: 0;
-        
+        @include responsive(s){
+            left: 35%;
+            top: 732px;
+            width: 25%;
+        }
     }
     @include responsive(m) {
         height: auto;
@@ -376,11 +420,18 @@ $container-s: 540px;
     }
 }
 
+
+
 #programa-texto{
     .video{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    iframe{
+        @include responsive(s){
+            width: 100%;
+        }
     }
 }
 
@@ -415,6 +466,15 @@ $container-s: 540px;
                 margin: 5px 10px;
             }
         }
+        @include responsive(s){
+            h2{
+                font-size: 24px;
+            }
+            p{
+                font-size: 16px;
+             
+            }
+        }
     }
 }
 
@@ -422,6 +482,11 @@ $container-s: 540px;
     p{
         margin-bottom: 20px;
         margin-right: 20px;
+    }
+    @include responsive(s){
+        img{
+            width: 100%;
+        }
     }
 }
 
@@ -687,6 +752,12 @@ $container-s: 540px;
         }
     }
     @include responsive(s) {
+        img{
+            width: 100%;
+        }
+        display: flex;
+    
+        flex-direction: column-reverse;
         p {
             margin-bottom: 16px;
             width: 100%;
@@ -698,7 +769,8 @@ $container-s: 540px;
 }
 
 #cronograma{
-    
+    display: flex;
+    flex-direction: row;
     h3{
         color: $blue;
         &::before{
@@ -714,11 +786,14 @@ $container-s: 540px;
     }
     .flex-item-1{
         
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+       
+       
         text-align: center;
+    }
+    @include responsive(s){
+        flex-direction: column;
+       
+        
     }
 }
 
