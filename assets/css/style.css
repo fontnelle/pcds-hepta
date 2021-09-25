@@ -350,6 +350,10 @@ body {
   }
 }
 
+.hero .flex-item-2 a img {
+  border: none !important;
+}
+
 .hero .mulher-cadeira {
   width: 83%;
   padding: 30px 0;

@@ -202,7 +202,11 @@ $container-s: 540px;
         }
     
     }
-
+    .flex-item-2{
+        a img {
+            border: none !important;
+        }
+    }
     .mulher-cadeira{
        
         width: 83%;
@@ -219,6 +223,7 @@ $container-s: 540px;
         margin: 0;
         padding: 0;
         animation: go-back 2s infinite alternate;
+       
         @include responsive(s){
             display: none;
         }
