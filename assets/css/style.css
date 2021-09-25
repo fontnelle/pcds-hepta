@@ -753,7 +753,10 @@ body {
 
 @media screen and (max-width: 960px) {
   #programa-complemento .o-que {
-    padding: 0;
+    padding: 20px 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
 }
 
@@ -794,6 +797,11 @@ body {
 @media screen and (max-width: 960px) {
   #como-sera img {
     width: 100%;
+  }
+  #como-sera .flex-item-1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
 }
 
@@ -1164,6 +1172,7 @@ body {
   }
   #jeitohepta button {
     width: 90vw;
+    margin-bottom: 20px;
   }
 }
 
@@ -1214,6 +1223,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #cronograma .flex-item-1 {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin-bottom: 30px;
   }
 }
 

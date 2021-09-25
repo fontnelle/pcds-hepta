@@ -513,7 +513,8 @@ $container-s: 540px;
             padding-bottom: 20px;
         }
         @include responsive(s){
-            padding: 0;
+            padding: 20px 0;
+            flex: 1 1 100%;
         }
     }
     .programatico{
@@ -553,7 +554,10 @@ $container-s: 540px;
     }
     @include responsive(s){
         img{
-            width: 100%;
+            width: 100%;                                                                                   
+        }
+        .flex-item-1{
+            flex: 1 1 100%;
         }
     }
 }
@@ -833,6 +837,7 @@ $container-s: 540px;
         }
         button {
             width: 90vw;
+            margin-bottom: 20px;
            
         }
     }
@@ -871,6 +876,11 @@ $container-s: 540px;
     }
     @include responsive(s){
         flex-direction: column;
+        .flex-item-1{
+            flex: 1 1 100%;
+            margin-bottom: 30px;
+        }
+        
        
         
     }
