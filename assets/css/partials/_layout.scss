@@ -35,6 +35,13 @@ $container-s: 540px;
     }
 }
 
+.carousel{
+    @include responsive(s){
+       
+        margin-top: -150px !important;
+    }
+}
+
 .carousel-indicators{
     button{
         margin-bottom: -40px !important;
@@ -280,6 +287,7 @@ a img{
         }
         .contenedor{
             font-size: 28px;
+            margin-top: -20px;
         }
     }
 }
@@ -296,7 +304,7 @@ a img{
     font-size: 36px;
     line-height: 85px;
     overflow: hidden;
-    // border: 1px solid hotpink;
+  
     ul {
         list-style: none;
         animation: cambiar 7s infinite;

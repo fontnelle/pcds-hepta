@@ -92,6 +92,12 @@ body {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 960px) {
+  .carousel {
+    margin-top: -150px !important;
+  }
+}
+
 .carousel-indicators button {
   margin-bottom: -40px !important;
 }
@@ -400,6 +406,7 @@ a img {
   }
   .hero .contenedor {
     font-size: 28px;
+    margin-top: -20px;
   }
 }
 
